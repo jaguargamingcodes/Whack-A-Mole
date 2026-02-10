@@ -7,15 +7,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Knewave&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Knewave&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
   <meta charset="UTF-8">
   <title>Whack-A-Mole</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmlS6Se_4FxoU6QdhMMW-SaUFSTEUt_YD2hAOihHkNSw&s">
 </head>
 
 <body>
-  <div id="settings" onclick="document.getElementById(settingsSetter.style.display = 'block')" style="font-size: 30px; justify-content: right; align-self: center; text-align: right; cursor: pointer; width: 40px">⚙️</div>
-  <div id="settingsSetter" style=" display: none; width: 100px; height: 200px; background-color: aliceblue; justify-content: right; align-self: center; text-align: center; cursor:default; color: black"><p>Settings:<p style="font-size: 10px;">difficulty</p><button id="dEasy" style="background-color: rgb(30, 255, 0);" onclick="Easy()">EASY</button><button id="dMed" onclick="Med()" style="background-color: yellow;">MEDIUM</button><button onclick="Hard"  id="dHard" style="background-color: red;">HARD</button></div>
+  <p style="text-align: right; font-family: 'Permanent Marker'">v2.0.0</p>
+  <div id="settings" onclick="document.getElementById(settingsSetter.style.display = 'block')"
+    style="font-size: 30px; justify-content: right; align-self: center; text-align: right; cursor: pointer; width: 40px">
+    ⚙️</div>
+  <div id="settingsSetter"
+    style=" display: none; width: 100px; height: 200px; background-color: aliceblue; justify-content: right; align-self: center; text-align: center; cursor:default; color: black">
+    <p>Settings:
+    <p style="font-size: 10px;">difficulty</p><button id="dEasy" style="background-color: rgb(30, 255, 0);"
+      onclick="Easy()">EASY</button><button id="dMed" onclick="Med()"
+      style="background-color: yellow;">MEDIUM</button><button onclick="Hard" id="dHard"
+      style="background-color: red;">HARD</button><button id="dExtreme"
+      style="background-color: rgb(162, 0, 255); border-color: red;" onclick="Extreme()">EXTREME</button>
+  </div>
   <div id="homeContent" onclick="document.getElementById('settingsSetter').style.display = 'none'">
     <h1 id="titleText" style="font-family: 'Freckle Face'; font-size: 150px;">Whack A Mole!</h1>
     <br><br><br>

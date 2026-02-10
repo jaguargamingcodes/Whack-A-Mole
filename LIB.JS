@@ -1,5 +1,9 @@
 valTime = 700;
 
+
+function Extreme() {
+    valtime = 1;
+}
 function Easy() {
     valTime = 1000;
 }
@@ -30,6 +34,7 @@ function start() {
     document.getElementById('a7').style = 'background-image: none;'
     document.getElementById('a8').style = 'background-image: none;'
     document.getElementById('a9').style = 'background-image: none;'
+    document.getElementById('settings').style = 'background-image: none;'
     function lose() {
        alert(`Time's Up, You got ${points} Points And Your Highscore is: ${localStorage.getItem('Highscore')}`)        
        points = points - points;
@@ -41,6 +46,7 @@ function start() {
     }
     function play() {
         selector = Math.floor(Math.random() * 9);
+        delselector = Math.floor(Math.random() * 9)
         if (selector == 0) {
             document.getElementById('a1').style = 'background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmlS6Se_4FxoU6QdhMMW-SaUFSTEUt_YD2hAOihHkNSw&s); ';
         }
@@ -69,6 +75,34 @@ function start() {
             document.getElementById('a9').style = 'background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmlS6Se_4FxoU6QdhMMW-SaUFSTEUt_YD2hAOihHkNSw&s);'
         }
 
+        if (delselector == 0) {
+            document.getElementById('a1').style = 'background-image:none; ';
+        }
+        else if (delselector == 1) {
+            document.getElementById('a2').style = 'background-image:none;'
+        }
+        else if (delselector == 2) {
+            document.getElementById('a3').style = 'background-image:none;'
+        }
+        else if (delselector == 3) {
+            document.getElementById('a4').style = 'background-image:none;'
+        }
+        else if (delselector == 4) {
+            document.getElementById('a5').style = 'background-image:none;'
+        }
+        else if (delselector == 5) {
+            document.getElementById('a6').style = 'background-image:none;'
+        }
+        else if (delselector == 6) {
+            document.getElementById('a7').style = 'background-image:none;'
+        }
+        else if (delselector == 7) {
+            document.getElementById('a8').style = 'background-image:none;'
+        }
+        else if (delselector == 8) {
+            document.getElementById('a9').style = 'background-image:none;'
+        }
+
         if(Number(localStorage.getItem('Highscore')) === 0 || Number(localStorage.getItem('Highscore')) < points) {
             localStorage.setItem("Highscore",points + 0);
             console.log('here');
@@ -78,7 +112,7 @@ function start() {
     }
 
     setInterval(play, valTime)
-    setTimeout(lose, 10000)
+    setTimeout(lose, 10000 * 3)
 }
 
 function change() {
